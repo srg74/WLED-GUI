@@ -1,5 +1,17 @@
 # WLED-GUI changelog
 
+## WLED-GUI version 0.6.0
+- added an update notifier
+- added new device discovery method
+- Now you get a warning when trying to add same device multiple times
+- optimized adding device functionality
+- updated for WLED version 0.11.1
+- optimized backwards compatibility
+- updated ui settings page
+- general code optimizations
+- updated to electron version 11.1.0
+- bigger app icon
+
 ## WLED-GUI version 0.5.1
 - added "More settings..." button to settings
 - added backward compatibility (back to version 0.10.0)

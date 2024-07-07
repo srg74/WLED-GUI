@@ -3,16 +3,16 @@
   "description": "A cross-platform desktop app for WLED",
   "author": {
     "name": "Woody",
-    "email": "27882680+WoodyLetsCode@users.noreply.github.com"
+    "email": "support@woody.pizza"
   },
   "version": "0.7.2",
-  "homepage": "https://github.com/WoodyLetsCode/WLED-GUI",
+  "homepage": "https://github.com/w00000dy/WLED-GUI",
   "bugs": {
-    "url": "https://github.com/WoodyLetsCode/WLED-GUI/issues"
+    "url": "https://github.com/w00000dy/WLED-GUI/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/WoodyLetsCode/WLED-GUI.git"
+    "url": "https://github.com/w00000dy/WLED-GUI.git"
   },
   "main": "main.js",
   "scripts": {
@@ -20,10 +20,10 @@
     "autostart": "electron . --hidden --dev",
     "pack": "electron-builder --dir",
     "build": "electron-builder -mwl",
-    "build windows": "electron-builder --windows",
-    "build windows oneclick": "electron-builder --windows -c.nsis.oneClick=true -c.nsis.allowToChangeInstallationDirectory=false",
-    "build windows msi": "electron-builder --windows -c.win.target=msi",
-    "build windows msi oneclick": "electron-builder --windows -c.win.target=msi -c.msi.oneClick=true",
+    "build windows": "electron-builder --windows --publish=never",
+    "build windows oneclick": "electron-builder --windows -c.nsis.oneClick=true -c.nsis.allowToChangeInstallationDirectory=false --publish=never",
+    "build windows msi": "electron-builder --windows -c.win.target=msi --publish=never",
+    "build windows msi oneclick": "electron-builder --windows -c.win.target=msi -c.msi.oneClick=true --publish=never",
     "build linux": "electron-builder --linux --publish=never",
     "build linux deb": "electron-builder --linux --publish=never -c.linux.target=deb",
     "build linux rpm": "electron-builder --linux --publish=never -c.linux.target=rpm",
@@ -59,13 +59,13 @@
     ]
   },
   "devDependencies": {
-    "electron": "^23.3.13",
-    "electron-builder": "^23.6.0"
+    "electron": "^29.1.4",
+    "electron-builder": "^24.13.3"
   },
   "dependencies": {
     "@electron/remote": "^2.0.8",
     "auto-launch": "^5.0.5",
     "bonjour": "^3.5.0",
-    "electron-log": "^4.4.6"
+    "electron-log": "^5.1.2"
   }
 }

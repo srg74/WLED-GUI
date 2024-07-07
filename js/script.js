@@ -1,7 +1,4 @@
 const log = require('electron-log');
-log.transports.console.level = "info";
-log.transports.file.level = "info";
-log.catchErrors();
 
 document.getElementById("logo").addEventListener("click", openRepositorie);
 // the imgClicked variable prevents the goToWled() function from beeing triggerd when clicking in a button
@@ -44,7 +41,7 @@ function openRepositorie() {
 // Opens the latest release of WLED-GUI in default browser
 function openRelease() {
     const { shell } = require('electron')
-    shell.openExternal('https://github.com/WoodyLetsCode/WLED-GUI/releases/latest')
+    shell.openExternal('https://github.com/w00000dy/WLED-GUI/releases/latest')
 }
 
 // Shows all Lighs in main page
@@ -127,10 +124,8 @@ function goToWled(index) {
         var lights = JSON.parse(localStorage.getItem("lights"));
         var ip = lights[index].ip;
         var version = lights[index].version;
-        var onlineMode = lights[index].onlineMode;
         localStorage.setItem("locIp", ip);
         localStorage.setItem("locVersion", version);
-        localStorage.setItem("onlineMode", onlineMode);
         location.href = "wled-viewer.html";
     }
 }
@@ -164,5 +159,5 @@ function remindLater() {
 
 function sync() {
     getStatus();
-    setTimeout(sync, 1000);
+    setTimeout(sync, 10000);
 }
